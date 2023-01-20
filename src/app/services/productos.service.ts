@@ -18,7 +18,7 @@ export class ProductosService {
   private cargarProductos(){
 
     this.http.get<Producto[]>('https://angular-html-b6bea-default-rtdb.firebaseio.com/productos_idx.json')
-             .subscribe( (resp) => {
+             .subscribe( (resp: Producto[]) => {
                 
                 console.log(resp);
                 this.productos = resp;
